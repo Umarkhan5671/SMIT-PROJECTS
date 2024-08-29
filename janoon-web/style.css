@@ -1,0 +1,1105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* header styling */
+
+.head{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90px;
+    background: white;
+    padding: 0px 30px 0px 30px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    /* position: absolute; */
+    padding: 0px 30px 0px 30px;
+    /* border: 1px solid white; */
+}
+
+
+.logo img{
+    width: 130px;
+}
+
+
+
+
+.tabs ul {
+display: flex;
+list-style: none;
+margin: 0px 0px;
+
+}
+
+
+
+ .tabs ul li {
+margin: 0px 40px;
+   
+    
+    } 
+
+.tabs ul li a , .dropdown{
+    
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      
+      
+    font-size: 16px;
+    padding: 5px;
+    
+    letter-spacing: 1px;
+   color: black;
+   text-decoration: none;
+   transition: all 0.5 ease;
+
+}
+
+.dropdown{
+   
+
+    font-weight: 500;
+    letter-spacing: 1px;
+   color: black;
+   text-decoration: none;
+   transition: all 0.5 ease;
+}
+
+
+
+.tabs ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F30101;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .tabs ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+    
+/* .tabs ul li a:hover, 
+.tabs ul li a.active{
+    color: #47B5B1;
+    border: 1px solid #47B5B1;
+    border-radius: 90px;
+} */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+.item-btn button {
+    background-color:  black;
+    color: white;
+    padding: 12px 25px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-bottom: 4px solid gainsboro;
+    transition: 0.3s;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.item-btn button:hover{
+background-color: white ;
+color: black;
+box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+border-bottom-width: 2px;
+transform: translateY(2px);
+border: 2px solid red;
+
+
+}
+
+.menu-btn i{
+    margin-right: 20px;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#clk{
+    display: none;
+}
+
+
+    /* header styling code ends here now starts its media queries  */
+
+
+
+
+    
+    
+    
+    
+    
+    /* Media queries for header */
+
+
+@media (max-width: 1155px) {
+
+
+.head{
+        
+        height: 65px;
+        background-color: white;
+        padding: 0px 30px 0px 30px;
+    }
+
+    
+
+    .tabs ul {
+        position: fixed;
+        top: 12%;
+        left: -100%;
+       right: -100%; 
+       
+        height: 100vh; /* Fixed the typo '100hv' to '100vh' */
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all  0.3s ease; /* Add a smooth transition */
+        background-color: white;
+    }
+
+#clk:checked ~ .tabs ul {
+ left: 0% ;
+}
+
+
+
+.tabs ul li {
+    margin: 40px 0;
+
+}
+
+.tabs ul li a {
+    font-size: 24px;
+    display: block;
+
+}
+
+.tabs ul li a:hover,
+.tabs ul li a.active{
+    color: #47B5B1;
+}
+
+
+
+.menu-btn i{
+   
+    display: inline-block;
+}
+
+}
+
+
+
+
+
+@media (max-width:435px) {
+  
+
+
+    .tabs ul {
+        position: fixed;
+        top: 10%;
+        left: -100%;
+        right: -100%;
+       
+        height: 100vh; /* Fixed the typo '100hv' to '100vh' */
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all  0.3s ease; /* Add a smooth transition */
+        background-color: white;
+    }
+
+#clk:checked ~ .tabs ul {
+ left: 0% ;
+}
+
+
+    .logo img{
+        width: 90px;
+    }
+
+    .item-btn button {
+        background-color:  black;
+    color: white;
+        padding: 7px 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 1px solid black ;
+    border-bottom: 4px solid gainsboro;
+
+       
+    
+        }
+     
+}
+
+
+
+
+
+
+@media (max-width: 400px) {
+
+
+    .tabs ul {
+        position: fixed;
+        top: 11%;
+        left: -100%;
+        right: -100%;
+       
+        height: 100vh; /* Fixed the typo '100hv' to '100vh' */
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all  0.3s ease; /* Add a smooth transition */
+        background-color: white;
+    }
+
+#clk:checked ~ .tabs ul {
+ left: 0% ;
+}
+
+    .logo img{
+        width: 50px;
+    }
+
+    .menu-btn i{
+        display: inline-block;
+    }
+
+    .item-btn button {
+        background-color:  black;
+    color: white;
+        padding: 7px 9px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 1px solid black ;
+    border-bottom: 4px solid gainsboro;
+       
+    
+        }
+
+    .logo img{
+        width: 85px;
+    }
+     
+}
+
+
+
+
+
+@media (max-width: 295px) {
+
+
+    .tabs ul {
+        position: fixed;
+        top: 11%;
+        left: -100%;
+        right: -100%;
+       
+        height: 100vh; /* Fixed the typo '100hv' to '100vh' */
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all  0.3s ease; /* Add a smooth transition */
+        background-color: white;
+    }
+
+#clk:checked ~ .tabs ul {
+ left: 0% ;
+}
+
+    
+
+    .menu-btn i{
+        display: inline-block;
+    }
+
+    .item-btn button {
+        background-color:  black;
+    color: white;
+        padding: 4px 7px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 1px solid black ;
+    border-bottom: 4px solid gainsboro;
+       
+    
+        }
+
+    .logo img{
+        width: 65px;
+    }
+     
+}
+
+
+
+   /* media queries for header ends here  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* image banner styling */
+
+.image-ban {
+    min-width: 268px;
+    max-width: 2667px;
+    max-height: 200px;
+    min-height: 150px;
+    border: 1px solid black;
+}
+
+.image-ban img {
+    margin-top: 60px;
+    max-height: 500px;
+    min-height: 150px;
+/* height: 100%; */
+    width: 100%;
+    display: block;
+}
+
+/* image banner styling code ends here */
+
+
+
+
+
+
+
+
+
+
+
+      /* band introduction styling code  */
+
+
+
+.band{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+margin-top: 400px;
+
+
+}
+
+
+.band-head h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 45px;
+letter-spacing: 2px;
+word-spacing: 1.6px;
+color: #FF0000;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+}
+
+
+.band-salogan  h3{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+      font-size: 20px;
+      color: #a5a3a3;
+      
+}
+
+
+.band-para p{
+
+max-width: 900px;
+min-width: 220px;
+
+font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+      font-size: 20px;
+      color: black;
+
+}
+
+
+  /* code for margin top and hover property of  cards  */
+
+.scale {
+   
+   margin-top: 60px;
+   
+   /* border:1px solid #a5a3a3; */
+    
+ }
+ 
+ .scale:hover{
+     transform: scale(1.03);
+     box-shadow: 9px 9px 14px -2px rgba(97, 92, 92, 0.76);
+     -webkit-box-shadow: 9px 9px 14px -2px rgba(97, 92, 92, 0.76);
+     -moz-box-shadow: 9px 9px 14px -2px rgba(97, 92, 92, 0.76);
+ }
+
+ .scale h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 20px;
+letter-spacing: 2px;
+word-spacing: 1.6px;
+color: #FF0000;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+  
+}
+
+
+
+
+
+
+ /* media queries for band introduction section  */
+
+ @media (max-width:930px) and (min-width:800px) {
+    .band{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    margin-top: 380px;
+    
+    
+    }
+    
+}
+
+
+@media (max-width:800px) and (min-width:651px) {
+    .band{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    margin-top: 300px;
+    
+    
+    }
+    
+}
+
+
+
+
+@media (max-width:650px) and (min-width:511px) {
+    .band{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    margin-top: 230px;
+    
+    
+    }
+
+
+    
+    
+}
+
+
+@media (max-width:510px) and (min-width:391px) {
+    .band{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    margin-top: 140px;
+    
+    
+    }
+
+    .band-para p{
+
+        padding: 0px 20px;
+         
+         }
+    
+}
+
+
+@media (max-width:391px) and (min-width:320px) {
+    .band {
+        margin-top: 80px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .band-para p{
+
+        padding: 0px 20px;
+         
+         }
+    
+}
+
+
+@media (max-width:319px) and (min-width:100px) {
+    .band{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    margin-top: 30px;
+    
+    
+    }
+
+
+    .band-para p{
+width: 290px;
+        padding: 0px 20px;
+         
+         }
+    
+}
+
+
+ /* media queries for band introduction section ends  */
+
+
+
+
+
+
+
+
+
+
+
+
+    /* tickets section styling code starts from here  */
+
+  .ticket-main{
+    background-color: black;
+    min-width: 268px;
+    max-width: 2667px;
+    max-height: 3200px;
+    /* min-height: 150px; */
+    margin-top: 100px;
+
+  }
+
+
+ .tickets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+ }
+
+ .ticket-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .ticket-head h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+    word-spacing: 1.6px;
+    color: #FF0000;
+    font-weight: 500;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+      margin-top: 60px;
+ }
+
+
+ .ticket-head h3{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+      font-size:16px;
+      color: white;
+      font-style: italic;
+ }
+
+
+
+
+
+    /* tickets month box styling code  */
+
+
+.container-month {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.sold-out-section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+   
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.sold-out {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.sold-out-label {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.sold-out2-label {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 28px;
+}
+
+.remaining-label {
+    background-color: rgb(74, 145, 4);
+    color: white;
+    padding: 5px 13px;
+    border-radius: 5px;
+    margin-left: 15px;
+
+}
+    
+    /* tickets month box styling code ends here  */
+
+
+
+    
+    
+    
+    
+    
+    /* cards css stytling starts from here */
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -100px;
+    /* gap: 30px; */
+    /* max-width: 1100px; */
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0px 20px;
+    /* max-width: 300px; */
+    flex: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.buy-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buy-btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid red;
+}
+
+@media (max-width:440px) {
+    .ticket-head h1{
+      font-size: 25px;
+     }
+    
+}
+
+
+    /* tickets section styling code starts from here  */
+
+
+
+
+
+
+
+
+    /* contact section styling code starts from here */
+
+.contact-main{
+    background-color: white;
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+    min-width: 268px;
+    max-width: 2667px;
+    max-height: 800px;
+    
+}
+
+
+.contact-head{
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+    
+}
+
+
+
+.contact-head h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 46px;
+    letter-spacing: 2px;
+    word-spacing: 1.6px;
+    color: #FF0000;
+    font-weight: 600;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+      margin-top: 60px;
+     
+ }
+
+
+ .contact-head h3{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+      font-size:18px;
+      color: black;
+      font-style: italic;
+     
+ }
+
+.sub-contact{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    margin-top: 70px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+justify-content: center;
+    max-width: 260px;
+    /* border: 1px solid black; */
+    margin-top: 60px;
+font-size: 17px; }
+   
+
+
+
+
+
+
+
+
+
+
+  /* contact form external styling code */
+
+.form-box {
+    max-width: 800px;
+    margin: auto;
+    /* padding: 50px;
+    background: #ffffff;
+    border: 10px solid #f2f2f2; */
+  }
+  
+  h1, p {
+    text-align: center;
+  }
+  
+  input, textarea {
+    width: 100%;
+  }
+  /* contact form external styling code ends */
+
+
+
+
+
+
+   /* media queries for contact section */
+
+   @media (max-width:519px) {
+    .sub-contact{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+
+    .info{
+       
+        margin-top: 40px; }
+    
+  }
+
+
+  .contact-form{
+    margin-top: -30px;
+}
+
+
+
+    
+  
+  /* footer bannner styling code */
+
+  .last-banner {
+    min-width: 268px;
+    max-width: 2667px;
+    max-height: 200px;
+    min-height: 150px;
+    /* border: 1px solid black; */
+    margin-top: 50px;
+}
+
+.last-banner img {
+    margin-top: 60px;
+    max-height: 500px;
+    min-height: 150px;
+/* height: 100%; */
+    width: 100%;
+    display: block;
+}
+
+#lb2{
+display: none;
+}
+
+
+    /* footer bannner styling code ends */
+
+
+
+
+/* media querey for footer banner */
+
+@media (max-width:767px) {
+
+    #lb1{
+        display: none;
+    }
+
+    #lb2{
+        display: block;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+   /* footer styling code starts from here */
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 400px;
+    margin-top: 400px;
+    gap: 30px;
+    margin-bottom: 20px;
+
+    /* border: 1px solid blue; */
+
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 35px;
+}
+
+.icons i:hover{
+   color: #F30101;
+}
+
+
+
+
+  .copy-right{
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+
+
+
+  /* footer media queries */
+
+  @media (max-width:436) {
+    .icons ul li a {
+      
+        width: 65px;
+        height: 65px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 65px;
+        font-size: 15px;
+       
+      }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
